@@ -13,5 +13,5 @@
 #
 ---
 include:
-  - board: adafruit_kb2040
-    shield: reviung41
+  - board: rpi_pico
+    shield: skeletyl
