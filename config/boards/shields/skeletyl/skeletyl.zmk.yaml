@@ -1,0 +1,6 @@
+file_format: "1"
+id: skeletyl 
+name: skeletyl 
+type: shield
+url: https://github.com/bastardkb/skeletyl/
+requires: [rpi_pico]
