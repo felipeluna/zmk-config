@@ -1,17 +1,32 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define DEFAULT 0
+#define NAV     1
+
+
 / {
     keymap {
 	    compatible = "zmk,keymap";
 
 	    default_layer {
 	    	bindings = <
-		   &kp Q &kp W	&kp E	          &kp R	            &kp T	&kp Y	        &kp U	        &kp I	     &kp O    &kp P 
-		   &kp A &kp S	&kp D	          &kp F	            &kp G	&kp H	        &kp J	        &kp K	     &kp L    &kp SQT
-		   &kp Z &kp X	&kp C	          &kp V	            &kp B	&kp N	        &kp M	        &kp COMMA    &kp DOT  &kp FSLH 
-		        	&mt LCTRL ESC	  &mt LSHFT SPACE   &kp TAB     &kp ENTER	&mt RSHFT BSPC  &mt RALT DEL
->;
+		   &kp Q        &kp W	         &kp E	           &kp R       &kp T	        &kp Y	        &kp U	        &kp I	     &kp O       &kp P 
+		   &kp A        &kp S	         &kp D	           &kp F       &kp G	        &kp H	        &kp J	        &kp K	     &kp L       &kp SQT
+		   &kp Z        &kp X	         &kp C	           &kp V       &kp B	        &kp N	        &kp M	        &kp COMMA    &kp DOT     &kp FSLH 
+		        	&mt LCTRL ESC	 &mt LSHFT SPACE   &kp TAB     &lt NAV ENTER	&mt RSHFT BSPC  &mt RALT DEL
+		>;
+	    };
+
+	    nav_layer {
+	    	bindings = <
+		   &kp LBRC	&kp AMPS	  &kp ASTRK	    &kp LPAR	&kp RBRC	&kp UNDER       &kp GRAVE       &kp COLON   &kp SEMI    &kp ENTER     
+		   &kp COLON    &kp DOLLAR        &kp PERCENT       &kp CARET   &kp PLUS	&kp MINUS       &sk LSHFT       &sk LCTRL   &sk LALT    &sk RMETA
+		   &kp TILDE    &kp EXCL	  &kp AT            &kp HASH	&kp PIPE	&kp EQUAL       &kp LBKT        &kp RBKT    &kp ENTER   &kp BSLH
+		        	&kp LPAR	  &kp RPAR          &kp QMARK   &kp ENTER	&mt RSHFT BSPC  &mt RALT DEL
+
+		>;
 	    };
     };
 };
+
